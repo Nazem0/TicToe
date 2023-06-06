@@ -13,16 +13,20 @@ squares.forEach(square => {
 });
 function draw(squareId) {
     var box = document.getElementById(squareId);
-    if (player == 0) {
-        box.innerText = "X";
-        box.setAttribute("style", "background-color:#87CEFA;")
-        player++;
+    if(box.innerText=="")
+    {
+        if (player == 0) {
+            box.innerText = "X";
+            box.setAttribute("style", "background-color:#87CEFA;")
+            player++;
+        }
+        else if (player == 1) {
+            box.innerText = "O";
+            box.setAttribute("style", "background-color:#FFE4E1;")
+            player--;
+        }
     }
-    else if (player == 1) {
-        box.innerText = "O";
-        box.setAttribute("style", "background-color:#FFE4E1;")
-        player--;
-    }
+
 }
 
 function game_status() {
@@ -55,7 +59,14 @@ function game_status() {
         ||
         bx3 == bx5&&bx3 == bx7 && bx3!=""
     ) {
-        alert(`Player Has Won`);
+        if(player==0)
+        {
+            alert("Player O Won")
+        }
+        else if(player==1)
+        {
+            alert("Player X Won")
+        }
         game_ended = true;
     }
 
