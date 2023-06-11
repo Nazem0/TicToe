@@ -10,6 +10,9 @@
     width: 60%; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1em;
+    overflow: hidden;
 }
 .square
 {
@@ -24,4 +27,20 @@
 .game_status
 {
     display: none;
+}
+button
+{
+    border: 0;
+    border-radius: 2em;
+    padding: 1em;
+    background:linear-gradient(rgb(106, 171, 255),rgb(0, 90, 163));
+    color:white;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 2s;
+    
+}
+button:hover{
+    background:linear-gradient(rgb(0, 90, 163),rgb(106, 171, 255));
+    scale: 1.2;
 }
