@@ -1,11 +1,13 @@
-body
+#my_game
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
 }
 #game_frame
 {
-    width: 60%;
+    width: 60%; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -16,6 +18,10 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15vh;
+    font-size: 10em;
     color: white;
+}
+.game_status
+{
+    display: none;
 }

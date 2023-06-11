@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Toe Game</title>
-    <link rel="stylesheet" href="assets/css/game_style.css">
+    <link rel="stylesheet" href="./assets/css/game_style.css">
 </head>
 <body>
-    <div id="controls_frame">
-    </div>
-    <div id="game_frame">
-        <section class="square" id="square_1"></section>
-        <section class="square" id="square_2"></section>
-        <section class="square" id="square_3"></section>
-        <section class="square" id="square_4"></section>
-        <section class="square" id="square_5"></section>
-        <section class="square" id="square_6"></section>
-        <section class="square" id="square_7"></section>
-        <section class="square" id="square_8"></section>
-        <section class="square" id="square_9"></section>
-    </div>
+    <section id="my_game">
+        <div id="controls_frame">
+            <button onclick="start_new_game()">Start New Game</button>
+        </div>
+        <div id="game_frame">
+            <section class="square" id="square_1"></section>
+            <section class="square" id="square_2"></section>
+            <section class="square" id="square_3"></section>
+            <section class="square" id="square_4"></section>
+            <section class="square" id="square_5"></section>
+            <section class="square" id="square_6"></section>
+            <section class="square" id="square_7"></section>
+            <section class="square" id="square_8"></section>
+            <section class="square" id="square_9"></section>
+        </div>
+        <div>
+            <h2 id="X_Won" class="game_status">Player X Won 🎉</h2>
+            <h2 id="O_Won" class="game_status">Player O Won 🎉</h2>
+            <h2 id="GAME" class="game_status">Game Ended With No Winner 😐</h2>
+        </div>
+    </section>
+    
 </body>
-<script src="assets/js/game_script.js"></script>
+<script src="./assets/js/game_script.js"></script>
 </html>
