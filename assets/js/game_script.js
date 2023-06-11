@@ -24,6 +24,8 @@ function draw(squareId) {
             box.setAttribute("style", "background-color:#FFE4E1;")
             player--;
         }
+        var pop=new Audio("./assets/audio/pop.mp3")
+        pop.play();
     }
 
 }
@@ -64,11 +66,15 @@ function game_status() {
         else if (player == 1) {
             document.getElementById("X_Won").setAttribute("style", "display:block;");
         }
+        var win_sound=new Audio("./assets/audio/win.mp3");
+        win_sound.play();
         game_ended = true;
         return;
     }
     if (bx1 != ""&&bx2 != ""&&bx3 != ""&&bx4 != ""&&bx5 != ""&&bx6 != ""&&bx7 != ""&&bx8 != ""&&bx9 != "") {
         document.getElementById("GAME").setAttribute("style", "display:block;");
+        var no_win=new Audio("./assets/audio/nowin.mp3");
+        no_win.play();
     }
 }
 
